@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <p>Bienvenido a su gestor de tareas</p>
+      <p>Natalia Piñeros, Santiago Gavilan, Ocar Vergara</p>
+    </section> 
+
+    <section>
+      <ul>
+        <li th:each="task, iterStat : ${taskList}">
+          <span th:text="${task.descriptionTask}" th:classappend="${task.isCompleted()} ? 'state' : ''"></span>
+          <form action="/changeStateTask" method="post" style="display:inline;">
+            <input type="hidden" th:value="${iterStat.index}" name="listTaskIndex">
+            <button type="submit" th:text="${task.isCompleted()} ? 'Desmarcar' : 'Marcar'"></button>
+          </form>
+        </li>
+      </ul>
+    </section> 
+
+
+  </body>
+</html>
