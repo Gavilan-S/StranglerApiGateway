@@ -1,3 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body > section:first-child {
+  background: gray;
+  padding: 1em;
+  height: 2em;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > section:first-child > p:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+body > section:first-child > p:last-child {
+  font-size: 1em;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -5,9 +29,12 @@ ul {
 
 li {
   padding: 10px;
-  background-color: #fff;
   margin: 5px 0;
+
+  background-color: #fff;
+
   border-radius: 5px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,13 +46,15 @@ li span.completed {
 }
 
 li form {
+  display: inline;
+
   margin: 0;
 }
 
 li button {
-  background-color: #007bff;
+  background-color: #90D5FF;
 }
 
 li button:hover {
-  background-color: #0056b3;
+  background-color: #4FC3F7;
 }
