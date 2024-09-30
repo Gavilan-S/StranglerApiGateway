@@ -17,9 +17,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>StranglerApiGateway</name>
+  <packaging> pom </packaging>
 
 	<description>Implementación patrones de diseño</description>
-
+ 
 	<url/>
 	<licenses>
 		<license/>
@@ -34,6 +35,10 @@
 		<url/>
 	</scm>
 
+  <modules>
+    <module>microservice-eureka</module>
+  </modules>
+  
 	<properties>
 		<java.version>23</java.version>
 	</properties>
