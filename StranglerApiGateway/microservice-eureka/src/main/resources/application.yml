@@ -7,9 +7,11 @@ spring:
     name: msvc-eureka
   config:
     import: optional:configserver:http://localhost:8888
+  main:
+    banner-mode: console 
 
 eureka:
-  instace:
+  instance:
     hostname: localhost
   client:
     register-with-eureka: false
