@@ -20,7 +20,7 @@ public class PageController {
     taskList.add(new Task("Terminar ejemplo",false));
   }
 
-	@GetMapping("/")
+  @GetMapping("/microservice-task")
 	public String showPage(Model model) {
     model.addAttribute("taskList", taskList);
 		return "index";
@@ -30,7 +30,7 @@ public class PageController {
     public String changeStateTask(int listTaskIndex) {
       Task task = taskList.get(listTaskIndex);
       task.setState(!task.isCompleted());
-      return "redirect:/";
+      return "redirect:/microservice-task";
 
   }
 
