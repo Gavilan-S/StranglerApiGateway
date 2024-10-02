@@ -9,10 +9,15 @@
 
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<groupId>com.microservice.task</groupId>
+
 	<artifactId>microservice-task</artifactId>
+
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>microservice-task</name>
+
 	<description>Spring Boot Microservice Task</description>
 	<url/>
 	<licenses>

@@ -2,8 +2,10 @@ server:
   port: 8080
 
 spring:
+  main:
+    web-application-type: reactive
   application:
-    name: Api-Gateway
+    name: microservice-apigateway 
   cloud:
     gateway:
       discovery:
@@ -14,6 +16,14 @@ spring:
           uri: lb://microservice-task
           predicates:
             - Path=/microservice-task/**
+        - id: static-content
+          uri: lb://microservice-task
+          predicates:
+            - Path=/css/**
+        - id: change-state-task
+          uri: lb://microservice-task
+          predicates:
+            - Path=/changeStateTask
 eureka:
   client:
     service-url:
