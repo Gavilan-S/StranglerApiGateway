@@ -39,6 +39,7 @@
     <module>microservice-eureka</module>
 	<module>microservice-config</module>
 	<module>microservice-task</module>
+	<module>Api-Gateway</module>
   </modules>
   
 	<properties>
